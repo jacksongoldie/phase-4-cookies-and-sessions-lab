@@ -1,4 +1,7 @@
 puts "📃 Seeding data..."
+Article.all.destroy_all
+User.all.destroy_all
+
 
 5.times do
   user = User.create(username: Faker::GreekPhilosophers.name.downcase.gsub(/\W/, '_'))
